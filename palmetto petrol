@@ -1,0 +1,356 @@
+Squarespace can't run our React app directly — but it accepts a single HTML/CSS/JS **Code Block** (or full-page Code Injection). I'll generate a standalone single-file version you can paste in. Form will use **mailto:** (opens your email pre-filled) since Squarespace won't host our Python backend. If you'd rather keep submissions saving online, I can wire it to a free Formspree endpoint instead — just say the word.
+Action: file_editor create /app/squarespace_palmetto_petrol.html --file-text "<!--
+  PALMETTO PETROL — Single-file Squarespace embed
+  HOW TO USE (pick ONE):
+   A) Whole-page version (recommended)
+      Squarespace → Settings → Advanced → Code Injection → HEADER
+        (paste only the <link>/<style> blocks — see comment below)
+      Then on the page → add a Code Block → paste the <body> markup section.
+   B) Easiest: add a Code Block on a blank page and paste this ENTIRE file.
+      Squarespace will render it. (Some Squarespace plans require \"Business\" or higher
+      for Code Blocks — Personal plans cannot use them.)
+
+  The form opens the user's email client (mailto:stevensjayce62@gmail.com) when
+  they hit Submit. To save submissions online instead, replace the <form> action
+  with a Formspree endpoint (https://formspree.io) — instructions at the bottom.
+-->
+
+<!-- ====== FONTS + TAILWIND (CDN) ====== -->
+<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+<link href=\"https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@900,800,700,500,400&display=swap\" rel=\"stylesheet\">
+<link href=\"https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">
+<script src=\"https://cdn.tailwindcss.com\"></script>
+
+<style>
+  .pp-root, .pp-root * { box-sizing: border-box; }
+  .pp-root { font-family: \"IBM Plex Sans\", system-ui, sans-serif; background:#0A0A0A; color:#fff; }
+  .pp-display { font-family: \"Cabinet Grotesk\", \"IBM Plex Sans\", system-ui, sans-serif; letter-spacing:-0.02em; }
+  .pp-stripes { background: repeating-linear-gradient(45deg,#ffffff,#ffffff 12px,#0a0a0a 12px,#0a0a0a 24px); }
+  .pp-root ::selection { background:#fff; color:#000; }
+  .pp-root input, .pp-root textarea, .pp-root select { color-scheme: dark; }
+  .pp-root input:focus, .pp-root textarea:focus, .pp-root select:focus { outline: none; }
+  .pp-field { width:100%; background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,.15); padding:1rem 0; color:#fff; font-size:1rem; transition: border-color .2s; }
+  .pp-field::placeholder { color:#52525b; }
+  .pp-field:focus { border-bottom-color:#fff; }
+  .pp-label { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:#71717a; font-weight:700; }
+  .pp-btn-primary { display:inline-flex; align-items:center; gap:.75rem; background:#fff; color:#000; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:1.1rem 2rem; font-size:.85rem; transition:all .2s; cursor:pointer; border:0; }
+  .pp-btn-primary:hover { background:#e4e4e7; transform: translateY(-2px); }
+  .pp-btn-secondary { display:inline-flex; align-items:center; gap:.75rem; background:transparent; border:2px solid #fff; color:#fff; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:1.1rem 2rem; font-size:.85rem; text-decoration:none; transition:all .2s; }
+  .pp-btn-secondary:hover { background:#fff; color:#000; }
+  .pp-link { color:#fff; text-decoration:none; }
+  .pp-link:hover { color:#fff; }
+</style>
+
+<!-- ====== MARKUP ====== -->
+<div class=\"pp-root\">
+
+  <!-- HEADER -->
+  <header class=\"sticky top-0 z-50 backdrop-blur-xl bg-black/80 border-b border-white/10\">
+    <div class=\"max-w-7xl mx-auto px-6 h-20 flex items-center justify-between\">
+      <a href=\"#top\" class=\"flex items-center gap-3 pp-link\">
+        <img src=\"https://customer-assets.emergentagent.com/job_gas-station-hub-10/artifacts/qn5jxt78_image.png\"
+             alt=\"Palmetto Petrol\" class=\"h-12 w-12 object-contain\" style=\"filter: invert(1);\">
+        <div class=\"leading-none\">
+          <div class=\"pp-display font-black uppercase text-base\">Palmetto Petrol</div>
+          <div class=\"text-[10px] tracking-[0.3em] uppercase font-bold\">SC Repair Co.</div>
+        </div>
+      </a>
+      <nav class=\"hidden md:flex items-center gap-10\">
+        <a href=\"#services\" class=\"text-sm uppercase tracking-[0.15em] font-semibold text-zinc-300 hover:text-white pp-link\">Services</a>
+        <a href=\"#about\" class=\"text-sm uppercase tracking-[0.15em] font-semibold text-zinc-300 hover:text-white pp-link\">About</a>
+        <a href=\"#coverage\" class=\"text-sm uppercase tracking-[0.15em] font-semibold text-zinc-300 hover:text-white pp-link\">Coverage</a>
+        <a href=\"#contact\" class=\"text-sm uppercase tracking-[0.15em] font-semibold text-zinc-300 hover:text-white pp-link\">Contact</a>
+      </nav>
+      <a href=\"tel:8438260172\" class=\"hidden md:inline-flex items-center gap-2 bg-white text-black font-bold uppercase tracking-wide px-5 py-3 text-sm pp-link\">
+        ☎ (843) 826-0172
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id=\"top\" class=\"relative min-h-[92vh] flex items-end overflow-hidden border-b border-white/10\">
+    <div class=\"absolute inset-0\">
+      <img src=\"https://images.unsplash.com/photo-1487803556724-cb9f0b8151d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxnYXMlMjBzdGF0aW9uJTIwY2Fub3B5JTIwbmlnaHR8ZW58MHx8fHwxNzgxMDY0MTQ5fDA&ixlib=rb-4.1.0&q=85\"
+           alt=\"\" class=\"w-full h-full object-cover\">
+      <div class=\"absolute inset-0 bg-black/70\"></div>
+      <div class=\"absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-black/40 to-transparent\"></div>
+    </div>
+    <div class=\"absolute top-20 left-0 right-0 h-2 pp-stripes opacity-80\"></div>
+    <div class=\"relative z-10 max-w-7xl mx-auto px-6 pb-24 pt-40 w-full\">
+      <div class=\"max-w-4xl\">
+        <div class=\"flex items-center gap-4 mb-8\">
+          <span class=\"w-12 h-px bg-white\"></span>
+          <span class=\"text-xs tracking-[0.3em] uppercase font-bold\">South Carolina · Gas Station Repair</span>
+        </div>
+        <h1 class=\"pp-display font-black uppercase tracking-tighter leading-[0.92] text-5xl sm:text-6xl md:text-7xl lg:text-8xl\">
+          Heavy-duty <br>repair &amp; service <br>that keeps you pumping.
+        </h1>
+        <p class=\"mt-8 max-w-2xl text-lg md:text-xl text-zinc-300 leading-relaxed\">
+          From fuel dispensers and underground tanks to POS systems and canopy lighting —
+          Palmetto Petrol keeps South Carolina gas stations running 24/7. Licensed, insured,
+          and on-call statewide.
+        </p>
+        <div class=\"mt-12 flex flex-col sm:flex-row gap-4\">
+          <a href=\"#contact\" class=\"pp-btn-primary\">Request Service →</a>
+          <a href=\"tel:8438260172\" class=\"pp-btn-secondary\">☎ Call (843) 826-0172</a>
+        </div>
+        <div class=\"mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 border border-white/10\">
+          <div class=\"bg-[#0A0A0A] p-6\"><div class=\"pp-display font-black text-3xl md:text-4xl\">24/7</div><div class=\"mt-2 text-xs uppercase tracking-[0.15em] text-zinc-400\">Emergency Response</div></div>
+          <div class=\"bg-[#0A0A0A] p-6\"><div class=\"pp-display font-black text-3xl md:text-4xl\">SC</div><div class=\"mt-2 text-xs uppercase tracking-[0.15em] text-zinc-400\">Statewide Coverage</div></div>
+          <div class=\"bg-[#0A0A0A] p-6\"><div class=\"pp-display font-black text-3xl md:text-4xl\">5</div><div class=\"mt-2 text-xs uppercase tracking-[0.15em] text-zinc-400\">Service Specialties</div></div>
+          <div class=\"bg-[#0A0A0A] p-6\"><div class=\"pp-display font-black text-3xl md:text-4xl\">100%</div><div class=\"mt-2 text-xs uppercase tracking-[0.15em] text-zinc-400\">Licensed &amp; Insured</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id=\"services\" class=\"py-24 md:py-32\">
+    <div class=\"max-w-7xl mx-auto px-6\">
+      <div class=\"flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16\">
+        <div class=\"max-w-2xl\">
+          <div class=\"flex items-center gap-4 mb-6\"><span class=\"w-12 h-px bg-white\"></span><span class=\"text-xs tracking-[0.3em] uppercase font-bold\">What we do</span></div>
+          <h2 class=\"pp-display font-black uppercase tracking-tighter text-4xl sm:text-5xl md:text-6xl leading-[0.95]\">Five trades. <br><span class=\"text-zinc-500\">One crew you can trust.</span></h2>
+        </div>
+        <p class=\"text-zinc-400 max-w-md leading-relaxed\">Every service is performed by certified petroleum technicians with decades of combined experience in convenience-store retail fueling.</p>
+      </div>
+      <div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-l border-t border-white/10\">
+        <!-- service tiles -->
+        <div class=\"border-r border-b border-white/10 p-8 md:p-10 hover:bg-[#141414] transition-colors\">
+          <div class=\"flex items-start justify-between mb-12\"><span class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold\">/01</span></div>
+          <h3 class=\"pp-display font-bold text-2xl mb-3\">Fuel Dispenser Repair</h3>
+          <p class=\"text-sm text-zinc-400 leading-relaxed\">Diagnostics, calibration, and repair for Gilbarco, Wayne, Bennett, and Tokheim dispensers. Get pumps back online fast.</p>
+        </div>
+        <div class=\"border-r border-b border-white/10 p-8 md:p-10 hover:bg-[#141414] transition-colors\">
+          <div class=\"flex items-start justify-between mb-12\"><span class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold\">/02</span></div>
+          <h3 class=\"pp-display font-bold text-2xl mb-3\">Tank Services</h3>
+          <p class=\"text-sm text-zinc-400 leading-relaxed\">UST inspection, line testing, leak detection, sump cleaning, and full compliance with SCDHEC standards.</p>
+        </div>
+        <div class=\"border-r border-b border-white/10 p-8 md:p-10 hover:bg-[#141414] transition-colors\">
+          <div class=\"flex items-start justify-between mb-12\"><span class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold\">/03</span></div>
+          <h3 class=\"pp-display font-bold text-2xl mb-3\">POS Systems</h3>
+          <p class=\"text-sm text-zinc-400 leading-relaxed\">Verifone Commander, Passport, and Gasboy installation, troubleshooting, EMV upgrades, and network support.</p>
+        </div>
+        <div class=\"border-r border-b border-white/10 p-8 md:p-10 hover:bg-[#141414] transition-colors\">
+          <div class=\"flex items-start justify-between mb-12\"><span class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold\">/04</span></div>
+          <h3 class=\"pp-display font-bold text-2xl mb-3\">Canopy &amp; Lighting</h3>
+          <p class=\"text-sm text-zinc-400 leading-relaxed\">LED retrofits, canopy lighting repair, pole signs, and electrical work to keep your station bright and safe.</p>
+        </div>
+        <div class=\"border-r border-b border-white/10 p-8 md:p-10 hover:bg-[#141414] transition-colors\">
+          <div class=\"flex items-start justify-between mb-12\"><span class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold\">/05</span></div>
+          <h3 class=\"pp-display font-bold text-2xl mb-3\">General Maintenance</h3>
+          <p class=\"text-sm text-zinc-400 leading-relaxed\">Preventive maintenance programs, hose &amp; nozzle replacement, filter changes, and routine site upkeep.</p>
+        </div>
+        <a href=\"#contact\" class=\"border-r border-b border-white/10 p-8 md:p-10 bg-white text-black flex flex-col justify-between hover:bg-zinc-200 transition-colors pp-link\">
+          <span class=\"text-xs tracking-[0.3em] uppercase font-bold opacity-70\">/Next</span>
+          <div>
+            <h3 class=\"pp-display font-black text-2xl md:text-3xl uppercase leading-tight mb-3\">Don't see your service? We probably handle it.</h3>
+            <span class=\"inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider\">Request a Quote ↗</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id=\"about\" class=\"py-24 md:py-32 relative\">
+    <div class=\"max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center\">
+      <div class=\"lg:col-span-6 relative\">
+        <div class=\"absolute -top-6 -left-6 w-24 h-24 pp-stripes opacity-90 hidden md:block\"></div>
+        <div class=\"relative aspect-[4/5] overflow-hidden\">
+          <img src=\"https://images.unsplash.com/photo-1610259998914-d1b9afe0dc55?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxtZWNoYW5pYyUyMHJlcGFpcmluZyUyMGZ1ZWwlMjBkaXNwZW5zZXJ8ZW58MHx8fHwxNzgxMDY0MTQ5fDA&ixlib=rb-4.1.0&q=85\" alt=\"\" class=\"w-full h-full object-cover\">
+          <div class=\"absolute inset-0 bg-gradient-to-t from-black/40 to-transparent\"></div>
+          <div class=\"absolute bottom-0 left-0 right-0 p-8 border-t border-white/30 bg-black/60 backdrop-blur-sm\">
+            <div class=\"pp-display font-black text-3xl\">EST.</div>
+            <div class=\"text-zinc-300 text-sm uppercase tracking-[0.2em]\">South Carolina · Family-Operated</div>
+          </div>
+        </div>
+      </div>
+      <div class=\"lg:col-span-6\">
+        <div class=\"flex items-center gap-4 mb-6\"><span class=\"w-12 h-px bg-white\"></span><span class=\"text-xs tracking-[0.3em] uppercase font-bold\">Why Palmetto Petrol</span></div>
+        <h2 class=\"pp-display font-black uppercase tracking-tighter text-4xl sm:text-5xl md:text-6xl leading-[0.95] mb-8\">Built for station owners, by station experts.</h2>
+        <p class=\"text-zinc-400 text-lg leading-relaxed mb-10 max-w-xl\">Downtime kills revenue. Every minute a pump is offline is money walking across the street to your competitor. We move fast, fix it right the first time, and treat your site like our own.</p>
+        <ul class=\"space-y-4\">
+          <li class=\"flex items-start gap-4\"><span class=\"text-white\">✓</span><span>Certified petroleum equipment technicians</span></li>
+          <li class=\"flex items-start gap-4\"><span class=\"text-white\">✓</span><span>SCDHEC-compliant tank &amp; line testing</span></li>
+          <li class=\"flex items-start gap-4\"><span class=\"text-white\">✓</span><span>Emergency dispatch — most calls answered same day</span></li>
+          <li class=\"flex items-start gap-4\"><span class=\"text-white\">✓</span><span>Transparent pricing, no surprise invoices</span></li>
+          <li class=\"flex items-start gap-4\"><span class=\"text-white\">✓</span><span>Backed by manufacturer-trained repair experience</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVERAGE -->
+  <section id=\"coverage\" class=\"py-24 md:py-32 bg-[#111111] border-y border-white/10\">
+    <div class=\"max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center\">
+      <div>
+        <div class=\"flex items-center gap-4 mb-6\"><span class=\"w-12 h-px bg-white\"></span><span class=\"text-xs tracking-[0.3em] uppercase font-bold\">Statewide Coverage</span></div>
+        <h2 class=\"pp-display font-black uppercase tracking-tighter text-4xl sm:text-5xl md:text-6xl leading-[0.95] mb-6\">Wherever the palmetto grows, we service.</h2>
+        <p class=\"text-zinc-400 text-lg leading-relaxed mb-10 max-w-xl\">From the Lowcountry to the Upstate — Palmetto Petrol services independent stations, branded chains, and convenience-store operators across all 46 counties in South Carolina.</p>
+        <div class=\"inline-flex items-center gap-3 border border-white/40 bg-white/5 px-5 py-3\">
+          <span>📍</span><span class=\"text-sm uppercase tracking-[0.2em] font-bold\">South Carolina · All 46 Counties</span>
+        </div>
+      </div>
+      <div class=\"grid grid-cols-2 md:grid-cols-3 border-l border-t border-white/10\">
+        <!-- cities -->
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Charleston</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Columbia</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Greenville</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Myrtle Beach</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Rock Hill</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Florence</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Spartanburg</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Sumter</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Hilton Head</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Aiken</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Beaufort</div></div>
+        <div class=\"border-r border-b border-white/10 p-5 md:p-6 hover:bg-[#1a1a1a] transition-colors\"><div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold mb-2\">SC</div><div class=\"pp-display font-bold text-lg\">Anderson</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id=\"contact\" class=\"py-24 md:py-32\">
+    <div class=\"max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20\">
+      <div class=\"lg:col-span-5\">
+        <div class=\"flex items-center gap-4 mb-6\"><span class=\"w-12 h-px bg-white\"></span><span class=\"text-xs tracking-[0.3em] uppercase font-bold\">Request Service</span></div>
+        <h2 class=\"pp-display font-black uppercase tracking-tighter text-4xl sm:text-5xl md:text-6xl leading-[0.95] mb-8\">Pump down?<br>Let's get rolling.</h2>
+        <p class=\"text-zinc-400 text-lg leading-relaxed mb-12 max-w-md\">Fill out the form and a technician will reach out — typically within an hour during business hours. For emergencies, call directly.</p>
+        <div class=\"space-y-6 border-t border-white/10 pt-8\">
+          <a href=\"tel:8438260172\" class=\"flex items-center gap-5 pp-link\">
+            <div class=\"w-12 h-12 bg-white text-black flex items-center justify-center\">☎</div>
+            <div><div class=\"pp-label\">Call</div><div class=\"pp-display font-bold text-xl\">(843) 826-0172</div></div>
+          </a>
+          <a href=\"mailto:stevensjayce62@gmail.com\" class=\"flex items-center gap-5 pp-link\">
+            <div class=\"w-12 h-12 bg-white text-black flex items-center justify-center\">✉</div>
+            <div><div class=\"pp-label\">Email</div><div class=\"pp-display font-bold text-lg break-all\">stevensjayce62@gmail.com</div></div>
+          </a>
+          <div class=\"flex items-center gap-5\">
+            <div class=\"w-12 h-12 border border-white/15 text-white flex items-center justify-center\">📍</div>
+            <div><div class=\"pp-label\">Coverage</div><div class=\"pp-display font-bold text-lg\">South Carolina — Statewide</div></div>
+          </div>
+          <div class=\"flex items-center gap-5\">
+            <div class=\"w-12 h-12 border border-white/15 text-white flex items-center justify-center\">⏰</div>
+            <div><div class=\"pp-label\">Hours</div><div class=\"pp-display font-bold text-lg\">Mon–Sat · 24/7 Emergency</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class=\"lg:col-span-7\">
+        <form id=\"pp-form\" class=\"space-y-2\">
+          <div class=\"grid grid-cols-1 md:grid-cols-2 gap-x-8\">
+            <div><label class=\"pp-label\">Your Name *</label><input name=\"name\" required placeholder=\"John Smith\" class=\"pp-field\"></div>
+            <div><label class=\"pp-label\">Phone</label><input name=\"phone\" placeholder=\"(843) 555-0000\" class=\"pp-field\"></div>
+            <div><label class=\"pp-label\">Email</label><input name=\"email\" type=\"email\" placeholder=\"you@station.com\" class=\"pp-field\"></div>
+            <div><label class=\"pp-label\">Station Name *</label><input name=\"station\" required placeholder=\"Palmetto Fuel #4\" class=\"pp-field\"></div>
+            <div class=\"md:col-span-2\"><label class=\"pp-label\">Location (City, SC) *</label><input name=\"location\" required placeholder=\"Charleston, SC\" class=\"pp-field\"></div>
+            <div class=\"md:col-span-2 pt-2\">
+              <label class=\"pp-label\">Service Needed *</label>
+              <select name=\"service\" required class=\"pp-field\" style=\"background:#0A0A0A;\">
+                <option value=\"\">Choose a service</option>
+                <option>Fuel Dispenser Repair</option>
+                <option>Tank Services</option>
+                <option>POS Systems</option>
+                <option>Canopy &amp; Lighting</option>
+                <option>General Maintenance</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class=\"md:col-span-2 pt-2\">
+              <label class=\"pp-label\">Tell us what's happening *</label>
+              <textarea name=\"message\" rows=\"5\" required placeholder=\"Describe the issue, when it started, equipment make/model if known...\" class=\"pp-field\" style=\"resize:none;\"></textarea>
+            </div>
+          </div>
+          <div class=\"pt-8\">
+            <button type=\"submit\" class=\"pp-btn-primary\">Submit Request →</button>
+            <p class=\"mt-6 text-xs text-zinc-500 max-w-md\">By submitting, you agree to be contacted by Palmetto Petrol regarding your service request.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class=\"bg-black border-t border-white/10\">
+    <div class=\"max-w-7xl mx-auto px-6 pt-24 pb-12\">
+      <div class=\"grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10\">
+        <div class=\"md:col-span-5\">
+          <div class=\"flex items-center gap-3 mb-6\">
+            <img src=\"https://customer-assets.emergentagent.com/job_gas-station-hub-10/artifacts/qn5jxt78_image.png\"
+                 alt=\"Palmetto Petrol\" class=\"h-14 w-14 object-contain\" style=\"filter: invert(1);\">
+            <div class=\"pp-display font-black tracking-tight text-xl uppercase\">Palmetto Petrol</div>
+          </div>
+          <p class=\"text-zinc-400 max-w-sm leading-relaxed text-sm\">Heavy-duty repair and maintenance for South Carolina gas stations. Fuel dispensers, tanks, POS, canopy lighting, and everything between.</p>
+        </div>
+        <div class=\"md:col-span-3\">
+          <div class=\"text-xs tracking-[0.3em] uppercase font-bold mb-5\">Services</div>
+          <ul class=\"space-y-3 text-zinc-300 text-sm\">
+            <li>Fuel Dispenser Repair</li><li>Tank Services</li><li>POS Systems</li><li>Canopy &amp; Lighting</li><li>General Maintenance</li>
+          </ul>
+        </div>
+        <div class=\"md:col-span-4\">
+          <div class=\"text-xs tracking-[0.3em] uppercase font-bold mb-5\">Contact</div>
+          <ul class=\"space-y-4 text-zinc-300 text-sm\">
+            <li><a href=\"tel:8438260172\" class=\"pp-link hover:text-white\">☎ (843) 826-0172</a></li>
+            <li><a href=\"mailto:stevensjayce62@gmail.com\" class=\"pp-link hover:text-white break-all\">✉ stevensjayce62@gmail.com</a></li>
+            <li>📍 South Carolina · Statewide</li>
+          </ul>
+        </div>
+      </div>
+      <div class=\"py-16 overflow-hidden text-center\">
+        <div class=\"pp-display font-black uppercase tracking-tighter leading-none select-none\" style=\"color:rgba(255,255,255,0.04); font-size:18vw;\">PALMETTO</div>
+      </div>
+      <div class=\"flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10\">
+        <div class=\"text-xs text-zinc-500\">© <span id=\"pp-year\"></span> Palmetto Petrol. All rights reserved.</div>
+        <div class=\"text-xs tracking-[0.3em] uppercase text-zinc-600 font-bold\">Licensed · Insured · SC</div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ====== FORM HANDLER ====== -->
+<script>
+  document.getElementById('pp-year').textContent = new Date().getFullYear();
+
+  document.getElementById('pp-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target;
+    var d = new FormData(f);
+    var subject = encodeURIComponent('Service Request — ' + (d.get('station') || 'New Lead'));
+    var body = encodeURIComponent(
+      'Name: ' + (d.get('name') || '') + '\n' +
+      'Phone: ' + (d.get('phone') || '') + '\n' +
+      'Email: ' + (d.get('email') || '') + '\n' +
+      'Station: ' + (d.get('station') || '') + '\n' +
+      'Location: ' + (d.get('location') || '') + '\n' +
+      'Service Needed: ' + (d.get('service') || '') + '\n\n' +
+      'Message:\n' + (d.get('message') || '')
+    );
+    window.location.href = 'mailto:stevensjayce62@gmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+
+<!--
+  ====== OPTIONAL: SAVE SUBMISSIONS ONLINE (instead of mailto) ======
+  1. Go to https://formspree.io → free account → create a new form for
+     stevensjayce62@gmail.com → copy your form endpoint, e.g.
+       https://formspree.io/f/abcd1234
+  2. Replace the entire <script> block above with this:
+
+  <script>
+    document.getElementById('pp-year').textContent = new Date().getFullYear();
+    document.getElementById('pp-form').setAttribute('action','https://formspree.io/f/YOUR_ID');
+    document.getElementById('pp-form').setAttribute('method','POST');
+    document.getElementById('pp-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      var f = e.target;
+      var res = await fetch(f.action, { method:'POST', body:new FormData(f), headers:{Accept:'application/json'}});
+      if (res.ok) { alert('Request received. We will be in touch shortly.'); f.reset(); }
+      else { alert('Could not submit. Please call (843) 826-0172.'); }
+    });
+  </script>
+-->
+"
+Observation: Create successful: /app/squarespace_palmetto_petrol.html
